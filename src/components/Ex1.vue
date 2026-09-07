@@ -6,7 +6,7 @@
     // const fruit3 = ref("peach")
 
     // Add code here
-    // challenge: use array  
+    // challenge: use array    
     const fruits = ref(["apple", "orange", "peach"])
     
 </script>
