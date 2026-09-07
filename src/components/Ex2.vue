@@ -15,7 +15,7 @@
 <template>
 
     <!-- Add code here --> 
-    <img v-bind:src="imageSrc" :width="imgWidth" :height="imgHeight" alt="Profile">
+    <img v-bind:src="imageSrc" :width="imgWidth" :height="imgHeight">
     <img v-bind="img" alt="Profile">
    
 </template>
