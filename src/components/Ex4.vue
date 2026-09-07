@@ -42,19 +42,19 @@
     <!-- note: need to use single quotes '' for classes such as btn-primary which contains '-' signs
                 because '-' is a minus operator for (Vue) JavaScript  -->
     <div id="part1":style="{ color: activeColor }">
-        <div :id="id" :class="{ 'blueBox': blueBox, 'redBox': !blueBox }">
+        <div v-bind:id="id" class="m-2" v-bind:class="{ 'blueBox': blueBox, 'redBox': !blueBox }">
             div ID : {{id}} 
         </div>
         
-        <button type="button" :class="{ 'btn-primary': blueBtn, 'btn-danger': !blueBtn }" v-on:click="changeColor">Change Color</button>
+        <button type="button" v-bind:class="{ 'btn': true, 'btn-primary': blueBtn, 'btn-danger': !blueBtn }" @click="changeColor">Change Color</button>
     </div>
 
     <div id="part2">
-        <div :id="id" :style="{ color: activeColor }">
-            div ID : {{id}} 
+        <div v-bind:id="id2" class="m-2" v-bind:style="{ color: activeColor }">
+            div ID : {{id2}} 
         </div>
        
-        <button type="button" :class="{ 'btn-danger': redBtn, 'btn-primary': !redBtn }" v-on:click="changeTextColor">Change Text Color</button> 
+        <button type="button" v-bind:class="{ 'btn': true, 'btn-danger': redBtn, 'btn-primary': !redBtn }" @click="changeTextColor">Change Text Color</button> 
     </div>
 
 </template>
