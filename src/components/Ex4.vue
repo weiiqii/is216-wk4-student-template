@@ -41,8 +41,8 @@
     <!-- Add/Modify code here -->
     <!-- note: need to use single quotes '' for classes such as btn-primary which contains '-' signs
                 because '-' is a minus operator for (Vue) JavaScript  -->
-    <div id="part1">
-        <div>
+    <div id="part1":style="{ color: activeColor }">
+        <div :id="id" :class="{ 'blueBox': blueBox, 'redBox': !blueBox }" style="width: fit-content;">
             div ID : {{id}} 
         </div>
         
@@ -50,7 +50,7 @@
     </div>
 
     <div id="part2">
-        <div>
+        <div :id="id" :style="{ color: activeColor }">
             div ID : {{id}} 
         </div>
        
